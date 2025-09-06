@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5DF7008C-0977-4FC6-B83B-BD09F986C3C0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DVLDFormLayer</RootNamespace>
+    <AssemblyName>DVLDFormLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplictionType\ManageApplicationTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplictionType\ManageApplicationTypes.Designer.cs">
+      <DependentUpon>ManageApplicationTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="International\InternationalAppliction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="International\InternationalAppliction.Designer.cs">
+      <DependentUpon>InternationalAppliction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="International\MangerInternatinalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="International\MangerInternatinalForm.Designer.cs">
+      <DependentUpon>MangerInternatinalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="International\ShowInternatinalInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="International\ShowInternatinalInfoForm.Designer.cs">
+      <DependentUpon>ShowInternatinalInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LicenseDrive\DriversForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LicenseDrive\DriversForm.Designer.cs">
+      <DependentUpon>DriversForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LicenseDrive\LicenseHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LicenseDrive\LicenseHistoryForm.Designer.cs">
+      <DependentUpon>LicenseHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LicenseDrive\ShowDriverLisence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LicenseDrive\ShowDriverLisence.Designer.cs">
+      <DependentUpon>ShowDriverLisence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Local Driving\IssueDriverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Local Driving\IssueDriverForm.Designer.cs">
+      <DependentUpon>IssueDriverForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Local Driving\ManageLocalDrivingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Local Driving\ManageLocalDrivingForm.Designer.cs">
+      <DependentUpon>ManageLocalDrivingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Local Driving\NewLocalDrivingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Local Driving\NewLocalDrivingForm.Designer.cs">
+      <DependentUpon>NewLocalDrivingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Users\AddNewUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Users\AddNewUserForm.Designer.cs">
+      <DependentUpon>AddNewUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Users\ChengePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Users\ChengePasswordForm.Designer.cs">
+      <DependentUpon>ChengePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Users\ManageUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Users\ManageUsersForm.Designer.cs">
+      <DependentUpon>ManageUsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Users\ShowDetalisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Users\ShowDetalisForm.Designer.cs">
+      <DependentUpon>ShowDetalisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenueForm.Designer.cs">
+      <DependentUpon>MenueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonsForm\ManagePeopleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonsForm\ManagePeopleForm.Designer.cs">
+      <DependentUpon>ManagePeopleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonsForm\AddEditPersonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonsForm\AddEditPersonForm.Designer.cs">
+      <DependentUpon>AddEditPersonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonsForm\PersonDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonsForm\PersonDetailsForm.Designer.cs">
+      <DependentUpon>PersonDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplictionType\UpdateApplicationType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplictionType\UpdateApplicationType.Designer.cs">
+      <DependentUpon>UpdateApplicationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test Types\ManageTestTyps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test Types\ManageTestTyps.Designer.cs">
+      <DependentUpon>ManageTestTyps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test Types\UpdateTestType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test Types\UpdateTestType.Designer.cs">
+      <DependentUpon>UpdateTestType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestAppointment\ScheduleTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestAppointment\ScheduleTestForm.Designer.cs">
+      <DependentUpon>ScheduleTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestAppointment\TakeTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestAppointment\TakeTestForm.Designer.cs">
+      <DependentUpon>TakeTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestAppointment\VisionTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestAppointment\VisionTestForm.Designer.cs">
+      <DependentUpon>VisionTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ControlVisionTestInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ControlVisionTestInfo.Designer.cs">
+      <DependentUpon>ControlVisionTestInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FilterAndInformationPerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\FilterAndInformationPerson.Designer.cs">
+      <DependentUpon>FilterAndInformationPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PersonInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PersonInformation.Designer.cs">
+      <DependentUpon>PersonInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\ShowInternationalInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ShowInternationalInfoControl.Designer.cs">
+      <DependentUpon>ShowInternationalInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ShowLicenseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ShowLicenseControl.Designer.cs">
+      <DependentUpon>ShowLicenseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserCuntrolInformatinUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserCuntrolInformatinUser.Designer.cs">
+      <DependentUpon>UserCuntrolInformatinUser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ApplictionType\ManageApplicationTypes.resx">
+      <DependentUpon>ManageApplicationTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="International\InternationalAppliction.resx">
+      <DependentUpon>InternationalAppliction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="International\MangerInternatinalForm.resx">
+      <DependentUpon>MangerInternatinalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="International\ShowInternatinalInfoForm.resx">
+      <DependentUpon>ShowInternatinalInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseDrive\DriversForm.resx">
+      <DependentUpon>DriversForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseDrive\LicenseHistoryForm.resx">
+      <DependentUpon>LicenseHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseDrive\ShowDriverLisence.resx">
+      <DependentUpon>ShowDriverLisence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Local Driving\IssueDriverForm.resx">
+      <DependentUpon>IssueDriverForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Local Driving\ManageLocalDrivingForm.resx">
+      <DependentUpon>ManageLocalDrivingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Local Driving\NewLocalDrivingForm.resx">
+      <DependentUpon>NewLocalDrivingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Users\AddNewUserForm.resx">
+      <DependentUpon>AddNewUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Users\ChengePasswordForm.resx">
+      <DependentUpon>ChengePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Users\ManageUsersForm.resx">
+      <DependentUpon>ManageUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Users\ShowDetalisForm.resx">
+      <DependentUpon>ShowDetalisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenueForm.resx">
+      <DependentUpon>MenueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonsForm\ManagePeopleForm.resx">
+      <DependentUpon>ManagePeopleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonsForm\AddEditPersonForm.resx">
+      <DependentUpon>AddEditPersonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonsForm\PersonDetailsForm.resx">
+      <DependentUpon>PersonDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplictionType\UpdateApplicationType.resx">
+      <DependentUpon>UpdateApplicationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test Types\ManageTestTyps.resx">
+      <DependentUpon>ManageTestTyps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test Types\UpdateTestType.resx">
+      <DependentUpon>UpdateTestType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestAppointment\ScheduleTestForm.resx">
+      <DependentUpon>ScheduleTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestAppointment\TakeTestForm.resx">
+      <DependentUpon>TakeTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestAppointment\VisionTestForm.resx">
+      <DependentUpon>VisionTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ControlVisionTestInfo.resx">
+      <DependentUpon>ControlVisionTestInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FilterAndInformationPerson.resx">
+      <DependentUpon>FilterAndInformationPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PersonInformation.resx">
+      <DependentUpon>PersonInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\ShowInternationalInfoControl.resx">
+      <DependentUpon>ShowInternationalInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ShowLicenseControl.resx">
+      <DependentUpon>ShowLicenseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserCuntrolInformatinUser.resx">
+      <DependentUpon>UserCuntrolInformatinUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People 400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Person 40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DVLDBassnisLayer\DVLDBassnisLayer.csproj">
+      <Project>{676cc5b9-20ad-4521-9978-dbec0c239518}</Project>
+      <Name>DVLDBassnisLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Woman 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Email 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Address 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phone 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Country 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddPerson 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonDetails 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send email 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users 2 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_settings 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonDetails 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_out 32 -2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users 2 400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add New User 72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add New User 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchPerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddPerson 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconLogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconLogo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Application Types 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LocalDriving License.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manage Applications 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detain 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Application Types 641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schedule Test 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Application Types 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApplicationTitle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TestType 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApplicationTitle1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Driving License 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Local 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LocalDriving License1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\International 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License Type 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User 32 -2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Applications.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Application 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Application 641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete 32 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schedule Test 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IssueDrivingLicense 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License View 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonLicenseHistory 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vision Test 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Written Test 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Street Test 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License Type 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License View 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PassedTests 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money 322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApplicationType.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User 32 -21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vision 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddAppointment 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lost Driving License 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Count 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Driving License 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License Type 322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes 322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LicenseView 400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drivers 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Driver Main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonLicenseHistory 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License View 322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License View 323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money 323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\International 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License Type 323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\International 322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\International 323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Applications1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License View 324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonLicenseHistory 321.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
